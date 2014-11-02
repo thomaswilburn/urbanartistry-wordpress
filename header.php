@@ -13,7 +13,7 @@
     <a href="/" class="desktop-only">
       <img class="logo" src="<?php echo get_template_directory_uri() ?>/images/ua_logo.jpg">
     </a>
-    <li class="urban desktop-hidden animated" id="mobile-menu-trigger">
+    <li class="urban mobile-only animated" id="mobile-menu-trigger">
       <a href="javascript:;">Menu</a>
     </li>
     <?php wp_nav_menu( array(
