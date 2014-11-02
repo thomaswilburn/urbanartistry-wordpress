@@ -8,11 +8,15 @@
 
     <h2><?php the_title(); ?></h2>
 
-    <div class="">
+    <div class="grid-9 mobile-12">
       <?php the_content(); ?>
     </div>
+    
+    <div class="sidebar grid-3 mobile-hidden">
+      <?php dynamic_sidebar("ua_home"); ?>
+    </div>
 
-    <div class="social-bar">
+    <div class="social-bar clearing">
       follow us on: 
       <a href="http://youtube.com/urbanartistry">youtube</a> 
       &bull; 
@@ -21,9 +25,6 @@
       <a href="http://twitter.com/urbanartistry">twitter</a>
     </div>
 
-    <div class="widgetry">
-      <?php dynamic_sidebar("ua_home"); ?>
-    </div>
 
   </div>
 
