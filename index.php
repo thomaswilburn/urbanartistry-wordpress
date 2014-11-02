@@ -1,9 +1,5 @@
 <?php get_header() ?>
 
-<div class="column grid-9">
-
-  <img class="small-hidden header-image" src="<?php header_image() ?>">
-
   <?php
     while (have_posts()) : the_post();
   ?>
@@ -16,9 +12,7 @@
   <?php
     endwhile;
   ?>
-
-</div>
-
+  
   <?php /*get_sidebar()*/ ?>
 
 <?php get_footer() ?>

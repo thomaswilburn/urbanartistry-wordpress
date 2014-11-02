@@ -34,7 +34,59 @@
 .grid-11 { width: @grid-column * 11; }
 .grid-12 { width: @grid-column * 12; }
 
-//TODO: add hide/show classes for each breakpoint
+@media @tablet {
+  .tablet-1 { width: @grid-column * 1; }
+  .tablet-2 { width: @grid-column * 2; }
+  .tablet-3 { width: @grid-column * 3; }
+  .tablet-4 { width: @grid-column * 4; }
+  .tablet-5 { width: @grid-column * 5; }
+  .tablet-6 { width: @grid-column * 6; }
+  .tablet-7 { width: @grid-column * 7; }
+  .tablet-8 { width: @grid-column * 8; }
+  .tablet-9 { width: @grid-column * 9; }
+  .tablet-10 { width: @grid-column * 10; }
+  .tablet-11 { width: @grid-column * 11; }
+  .tablet-12 { width: @grid-column * 12; }
+}
+
+@media @mobile {
+  .mobile-1 { width: @grid-column * 1; }
+  .mobile-2 { width: @grid-column * 2; }
+  .mobile-3 { width: @grid-column * 3; }
+  .mobile-4 { width: @grid-column * 4; }
+  .mobile-5 { width: @grid-column * 5; }
+  .mobile-6 { width: @grid-column * 6; }
+  .mobile-7 { width: @grid-column * 7; }
+  .mobile-8 { width: @grid-column * 8; }
+  .mobile-9 { width: @grid-column * 9; }
+  .mobile-10 { width: @grid-column * 10; }
+  .mobile-11 { width: @grid-column * 11; }
+  .mobile-12 { width: @grid-column * 12; }
+}
+
+.mobile-only, .tablet-only, .desktop-hidden {
+  display: none !important;
+}
+
+@media @tablet {
+  .mobile-only, .desktop-only, .tablet-hidden {
+    display: none !important;
+  }
+
+  .tablet-only {
+    display: block !important;
+  }
+}
+
+@media @mobile {
+  .desktop-only, .tablet-only, .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+}
 
 .clearfix:after {
     content: ".";

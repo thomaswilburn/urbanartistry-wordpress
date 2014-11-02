@@ -1,9 +1,5 @@
 <?php get_header() ?>
 
-<div class="column grid-9">
-
-  <img class="small-hidden header-image" src="<?php header_image() ?>">
-
   <div class="family-members">
 
   <?php
@@ -16,7 +12,7 @@
 
       //custom sort for family pages
       //sorts first by "rank", then by "sort name"
-      usort($pageposts, create_function("$a, $b",
+      $sorter = create_function('$a,$b',
         '$rankA = get_post_meta($a->ID, "rank", true) * 1;
         $rankB = get_post_meta($b->ID, "rank", true) * 1;
         $rankA = $rankA == 0 ? 100000 : $rankA;
@@ -25,7 +21,9 @@
         if ($rankA > $rankB) return 1;
         $nameA = get_post_meta($a->ID, "sort name", true);
         $nameB = get_post_meta($b->ID, "sort name", true);
-        return strcasecmp($nameA, $nameB);'));
+        return strcasecmp($nameA, $nameB);'
+      );
+      usort($pageposts, $sorter);
 
       global $post;
       $currentRank = 1;
@@ -42,8 +40,6 @@
   ?>
 
   </div>
-
-</div>
 
 <script>
   $(".has-video")

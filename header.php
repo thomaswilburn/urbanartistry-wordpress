@@ -7,18 +7,14 @@
   <title><?php wp_title("::", true, "right"); bloginfo("name"); ?></title>
   <?php wp_head() ?>
 </head>
-<body>
+<body class="<?php echo $post->post_name ?>">
 
-  <div class="navigation grid-3 medium-12 small-12 site-menu">
-    <a href="/">
+  <div class="navigation grid-3 mobile-12 tablet-12 site-menu">
+    <a href="/" class="desktop-only">
       <img class="logo" src="<?php echo get_template_directory_uri() ?>/images/ua_logo.jpg">
     </a>
-    <li class="urban large-hidden animated" id="mobile-menu-trigger">
-      <a class="small-only" href="javascript:;">Menu</a>
-      <span class="medium-only clearfix" style="text-align: left;">
-        <a href="javascript:;" style="float: left">Urban Artistry</a>
-        <a href="javascript:;" style="float: right">MENU</a>
-      </span>
+    <li class="urban desktop-hidden animated" id="mobile-menu-trigger">
+      <a href="javascript:;">Menu</a>
     </li>
     <?php wp_nav_menu( array(
       "theme_location" => "main-menu",
@@ -28,3 +24,7 @@
       "menu_class" => "urban menu-inner clearfix",
     ) ); ?>
   </div>
+
+  <div class="column grid-9 mobile-12 tablet-12">
+
+   <img class="small-hidden header-image" src="<?php get_ua_banner() ?>">

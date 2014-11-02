@@ -1,6 +1,6 @@
+</div>
+
 <div class="footer clearing">
-  Urban Artistry Inc., is a nonprofit, tax-exempt charitable organization under Section 501(c)(3) of the Internal Revenue Code. | Donations are tax-deductible as allowed by law.
-  <hr>
   Copyright © 2014 Urban Artistry, Inc.
   <?php wp_footer() ?>
 </div>

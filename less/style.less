@@ -8,6 +8,7 @@ Description: A new, lighter, responsive theme for UA on Wordpress.
 
 @import "vars";
 @import "grid";
+@import "menu";
 
 * {
 	-moz-box-sizing: border-box;
@@ -84,100 +85,6 @@ h3 {
 
 .nobreak br, .nobreak p {
   display: none;
-}
-
-/* menu items and mobile menu */
-
-.logo {
-  display: block;
-}
-
-.site-menu ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  font-size: 12px;
-}
-
-.site-menu li {
-  display: block;
-  color: #CCC;
-  text-shadow: -2px -2px 0px black;
-  padding: 1em 0 1em 1em;
-  text-transform: uppercase;
-  background: #333;
-  border-top: 1px solid #444;
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* IE8 hack */
-
-.site-menu li.large-hidden {
-  display: none;
-}
-
-.site-menu li a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-}
-
-.site-menu li:hover, .site-menu .current-menu-item {
-  padding-left: .5em;
-  color: #F72405;
-  background: #222;
-}
-
-.sub-menu li, .sub-menu li.current-menu-item {
-  background: transparent;
-  padding: 0 1em;
-}
-
-
-@media (max-width: 800px) {
-
-  .site-menu li {
-    text-align: center;
-    border-top: none;
-  }
-
-  .site-menu li:hover, .site-menu .current-menu-item {
-    padding: 1em;
-    color: #F72405;
-    background: #222;
-  }
-
-  .site-menu ul {
-    display: none;
-  }
-
-  /* IE 8 hack again */
-  .site-menu li.large-hidden {
-    display: block;
-  }
-
-  .menu-inner {
-    border-top: 1px solid black;
-    box-shadow: 0px 0px 5px black inset;
-    background: #333;
-  }
-
-  .menu-inner li {
-    width: 33%;
-    margin-left: .1%;
-    float: left;
-  }
-
-}
-
-@media (min-width: 501px) and (max-width: 800px) {
-  .site-menu .logo { display: none;}
-}
-
-@media (min-width: 801px) {
-  .site-menu ul { display: block !important;}
 }
 
 /* main site content area */

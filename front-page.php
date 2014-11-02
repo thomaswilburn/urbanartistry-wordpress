@@ -1,14 +1,10 @@
 <?php get_header() ?>
 
-<div class="column grid-9">
-
- <img class="small-hidden header-image" src="<?php header_image() ?>">
-
   <?php
     the_post();
   ?>
 
-  <div class="content clearfix">
+  <div class="content clearfix front-page">
 
     <h2><?php the_title(); ?></h2>
 
@@ -30,7 +26,5 @@
     </div>
 
   </div>
-
-</div>
 
 <?php get_footer() ?>

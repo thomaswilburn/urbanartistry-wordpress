@@ -27,10 +27,10 @@
 
   <div class="grid-6">
     <?php the_content() ?>
-    <?php if (get_post_meta($id, "link", true)) {  ?>
+    <?php if (get_post_meta($id, "link", true)) : ?>
     <a href="<?php echo get_post_meta($id, "link", true) ?>" class="bio-link">Read more...</a>
-    <? } ?>
+    <?php endif; ?>
   </div>
-<?php endif //has_post_thumbnail()?>
+<?php endif; //has_post_thumbnail()?>
 
 </div>

@@ -1,0 +1,18 @@
+<style>
+.ua-family ul {
+  list-style-type: none;
+}
+.ua-family li {
+  padding: 4px 0;
+  vertical-align: text-bottom;
+}
+</style>
+<div class="ua-family">
+  <ul>
+    <li> <label>Title</label>: <input name="ua-family-title" style="width: 200px;" value="<?= $postmeta['title'] ?>">
+    <li> <label>Sorting name</label>: <input name="ua-family-sort-name" value="<?= $postmeta['sort name'] ?>">
+    <li> <label>Page Order</label>: <input name="ua-family-order" value="<?= $postmeta['rank'] ?>">
+    <li> <label>Bio Post Link</label>: <input name="ua-family-link" style="width: 200px;" value="<?= $postmeta['link'] ?>">
+    <li> <label>Bio video ID</label>: <input name="ua-family-youtube" value="<?= $postmeta['bio video'] ?>"
+  </ul>
+</div>

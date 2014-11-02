@@ -26,3 +26,12 @@ function ua_init() {
   add_theme_support("custom-header", array());
 
 }
+
+include_once(__DIR__."/banners/banners.php");
+
+function get_ua_banner() {
+  global $ua_banners;
+  echo get_template_directory_uri() . "/banners/" . $ua_banners[array_rand($ua_banners)];
+}
+
+include_once(__DIR__."/plugins/ua-family/ua-family.php");

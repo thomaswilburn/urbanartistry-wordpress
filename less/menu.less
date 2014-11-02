@@ -1,0 +1,63 @@
+/* menu items and mobile menu */
+@import "vars";
+
+.logo {
+  display: block;
+}
+
+.site-menu {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 12px;
+  }
+
+  li {
+    display: block;
+    color: #CCC;
+    text-shadow: -2px -2px 0px black;
+    padding: 1em 0 1em 1em;
+    text-transform: uppercase;
+    background: #333;
+    border-top: 1px solid #444;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    &:hover, .current-menu-item {
+      padding-left: .5em;
+      color: @ua-red;
+      background: #222;
+    }
+
+  }
+
+  .sub-menu li, .sub-menu li.current-menu-item {
+    background: transparent;
+    padding: .5em 1em;
+  }
+
+  @media @tablet {
+    &.show .mobile-menu-trigger {
+      color: @ua-red;
+    }
+
+    .menu-primary-navigation-container {
+      display: none;
+      position: absolute;
+      width: 100%;
+
+      .show& {
+        display: block;
+      }
+    }
+  }
+
+}
