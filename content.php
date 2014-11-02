@@ -1,0 +1,7 @@
+<div class='content clearfix <?php echo $post->post_name ?>'>
+
+  <h2><?php the_title(); ?></h2>
+
+  <?php the_content(); ?>
+
+</div>

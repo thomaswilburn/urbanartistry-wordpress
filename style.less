@@ -1,0 +1,501 @@
+/*
+Theme Name: Urban Artistry
+Author: Thomas Wilburn
+Author URI: http://www.thomaswilburn.net
+Version: 2.0
+Description: A new, lighter, responsive theme for UA on Wordpress.
+*/
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* reset */
+html, body, div, h1, h2, h3, h4, h5, p {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+h2 {
+  margin-bottom: .5em;
+}
+
+img, object, embed, iframe {
+  max-width: 100% !important;
+  outline: none;
+  border: none;
+}
+
+/* responsive units */
+html {
+  font-size: 14px;
+}
+
+@mobile: ~"(max-width: 480px)";
+@tablet: ~"(max-width: 720px)";
+
+/* 12-column grid */
+
+@grid-column: 100% / 12;
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12 { 
+  float: left
+
+  @media @mobile {
+    width: 100%;
+  }
+}
+
+.grid-1 { width: @grid-column * 1; }
+.grid-2 { width: @grid-column * 2; }
+.grid-3 { width: @grid-column * 3; }
+.grid-4 { width: @grid-column * 4; }
+.grid-5 { width: @grid-column * 5; }
+.grid-6 { width: @grid-column * 6; }
+.grid-7 { width: @grid-column * 7; }
+.grid-8 { width: @grid-column * 8; }
+.grid-9 { width: @grid-column * 9; }
+.grid-10 { width: @grid-column * 10; }
+.grid-11 { width: @grid-column * 11; }
+.grid-12 { width: @grid-column * 12; }
+
+//TODO: add hide/show classes for each breakpoint
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearing {
+  clear: both;
+}
+
+/* element styling and typography */
+
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+  font-family: 'Droid Sans', Tahoma, sans-serif;
+  background: #EEE;
+  line-height: 1.5;
+}
+
+.animated {
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+  -ms-transition-duration: .25s;
+  transition-duration: .25s;
+}
+
+.urban {
+  font-family: 'Archivo Black';/*'Bowlby One';*/
+  text-transform: uppercase;
+}
+
+.artistry {
+  font-family: 'Pinyon Script';
+  font-size: 1.5em;
+}
+
+h1 {
+
+}
+
+h2 {
+  font-family: 'Archivo Black';
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+.ua-red, a {
+  color: #F72405
+}
+
+/* class to kill Wordpress "friendly" formatting */
+
+.nobreak br, .nobreak p {
+  display: none;
+}
+
+/* menu items and mobile menu */
+
+.logo {
+  display: block;
+}
+
+.site-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+.site-menu li {
+  display: block;
+  color: #CCC;
+  text-shadow: -2px -2px 0px black;
+  padding: 1em 0 1em 1em;
+  text-transform: uppercase;
+  background: #333;
+  border-top: 1px solid #444;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* IE8 hack */
+
+.site-menu li.large-hidden {
+  display: none;
+}
+
+.site-menu li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.site-menu li:hover, .site-menu .current-menu-item {
+  padding-left: .5em;
+  color: #F72405;
+  background: #222;
+}
+
+.sub-menu li, .sub-menu li.current-menu-item {
+  background: transparent;
+  padding: 0 1em;
+}
+
+
+@media (max-width: 800px) {
+
+  .site-menu li {
+    text-align: center;
+    border-top: none;
+  }
+
+  .site-menu li:hover, .site-menu .current-menu-item {
+    padding: 1em;
+    color: #F72405;
+    background: #222;
+  }
+
+  .site-menu ul {
+    display: none;
+  }
+
+  /* IE 8 hack again */
+  .site-menu li.large-hidden {
+    display: block;
+  }
+
+  .menu-inner {
+    border-top: 1px solid black;
+    box-shadow: 0px 0px 5px black inset;
+    background: #333;
+  }
+
+  .menu-inner li {
+    width: 33%;
+    margin-left: .1%;
+    float: left;
+  }
+
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+  .site-menu .logo { display: none;}
+}
+
+@media (min-width: 801px) {
+  .site-menu ul { display: block !important;}
+}
+
+/* main site content area */
+
+.column {
+  padding: 0 1em;
+}
+
+@media (max-width: 800px) {
+  .column {
+    padding: 0;
+  }
+}
+
+.content {
+  box-shadow: 4px 2px 8px #AAA;
+  background: white;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.header-image {
+  display: block;
+  margin-bottom: 1em;
+  box-shadow: 4px 2px 8px #AAAAAA;
+}
+
+.sidebar {
+  padding: 1em;
+  border: 3px dashed #EEE;
+  background: #F8F8F8;
+  top: 0;
+  font-size: .75em;
+  text-align: center;
+
+}
+
+.sidebar li {
+  list-style-type: none;
+  margin-bottom: 2em;
+  display: block;
+  width: 100%;
+}
+
+.sidebar h2, h3, h4 {
+  font-size: 1em;
+  font-family: 'Droid Sans', tahoma, helvetica;
+}
+
+.sidebar input {
+  width: 100%;
+}
+
+.sidebar img {
+  margin: 0 auto 1em;
+  width: 100px;
+  display: block;
+}
+
+@media (max-width: 500px) {
+
+  .sidebar img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+
+}
+
+/* mailchimp area */
+
+.widgetry {
+  text-align: center;
+}
+
+.widgetry li {
+  list-style-type: none;
+}
+
+.widgetry h2 {
+  font-weight: normal;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.mc_signup {
+  font-size: .8em;
+}
+
+.mc_merge_var {
+  display: inline;
+}
+
+#mc_signup_form label.mc_var_label {
+  display: inline;
+}
+
+#mc_signup_form .mc_input {
+  width: 200px;
+  display: inline;
+  border: 1px solid #888;
+  margin: 0px 8px;
+}
+
+.mc_signup_submit {
+  display: inline;
+}
+
+input#mc_signup_submit {
+  display: inline;
+  margin-top: 0px;
+  width: 100px;
+  border: 1px solid #888;
+}
+
+/* home page */
+
+img.size-icon {
+  width: 50px;
+  max-height: 50px;
+}
+
+.social-bar {
+  width: 100%;
+  background: #EEE;
+  color: #888;
+  padding: 4px;
+  border-width: 1px 0;
+  border-color: #DDD;
+  border-style: solid;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.organizations {
+  text-align: center;
+  margin: 8px 0;
+}
+
+.organizations img {
+  margin: 0 4px;
+}
+
+.organizations a {
+  text-decoration: none;
+}
+
+/* family page */
+
+.family-members {
+  vertical-align: text-bottom;
+}
+
+.bio-post {
+  display: inline-block;
+  margin-right: -5px;
+  vertical-align: top;
+}
+
+.bio-post h2, .bio-post h3 {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.bio-post h2 {
+  font-size: 1.25em;
+  height: 2em;
+  line-height: 1;
+  text-overflow: ellipsis;
+}
+
+.bio-post h3 {
+  font-size: 1.3em;
+}
+
+.bio-post p {
+  /* text-align: justify;*/
+}
+
+.bio-post ul {
+  margin: 0 auto;
+}
+
+.mugshot-container {
+  text-align: center;
+  padding: 0 .5em;
+  position: relative;
+}
+
+.mugshot-container.has-video {
+  cursor: pointer;
+}
+
+.mugshot-container .play-button {
+  background: url(images/start.png) no-repeat 0 -84px;
+  height: 84px;
+  width: 84px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  margin: -42px;
+  top: 50%;
+  left: 50%;
+  opacity: .5;
+}
+
+.mugshot-container .play-button:hover {
+  background-position: 0px 0px;
+  opacity: 1;
+}
+
+.video-chiron {
+  position: absolute;
+  bottom: 0;
+  height: 2em;
+  background: #FFF;
+  color: black;
+  display: block;
+  opacity: .7;
+  vertical-align: middle;
+  alpha: filter(opacity=70);
+  width: 100%;
+  font-size: 16px;
+}
+
+/* family flexbox */
+
+/* add when flex-wrap hits Firefox */
+
+/* education page */
+
+.content.education h2 {
+  clear: right;
+}
+
+/* plugin stuff */
+
+.ua-tubepress-thumb {
+  text-align: center;
+}
+
+.ua-tubepress-thumb a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* WordPress classes */
+
+img.alignright {
+  float: right;
+  margin-left: 1em;
+}
+
+img.alignleft {
+  float: left;
+  margin-right: 1em;
+}
+
+/* footer area and misc */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 12px;
+}
