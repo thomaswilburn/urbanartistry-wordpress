@@ -1,5 +1,9 @@
 <?php
 
+if (!defined("__DIR__")) {
+  define("__DIR__", dirname(__FILE__));
+}
+
 add_action("init", ua_init);
 add_action("wp_enqueue_scripts", "replaceJQuery");
 
