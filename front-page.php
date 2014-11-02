@@ -1,8 +1,8 @@
 <?php get_header() ?>
 
-<div class='column fluid grid-9 medium-100'>
+<div class="column fluid grid-9 medium-100">
 
- <img class='small-hidden header-image' src='<?php header_image() ?>'>
+ <img class="small-hidden header-image" src="<?php header_image() ?>">
 
   <?php
 
@@ -10,7 +10,7 @@
 
   ?>
 
-  <div class='content clearfix'>
+  <div class="content clearfix">
 
     <h2><?php the_title(); ?></h2>
 
@@ -30,7 +30,7 @@
     </div>
 
     <div class="widgetry">
-      <?php dynamic_sidebar('ua_home'); ?>
+      <?php dynamic_sidebar("ua_home"); ?>
     </div>
 
   </div>

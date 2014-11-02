@@ -1,0 +1,49 @@
+/* 12-column grid */
+
+@grid-column: 100% / 12;
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12 { 
+  float: left;
+
+  @media @mobile {
+    width: 100%;
+  }
+}
+
+.grid-1 { width: @grid-column * 1; }
+.grid-2 { width: @grid-column * 2; }
+.grid-3 { width: @grid-column * 3; }
+.grid-4 { width: @grid-column * 4; }
+.grid-5 { width: @grid-column * 5; }
+.grid-6 { width: @grid-column * 6; }
+.grid-7 { width: @grid-column * 7; }
+.grid-8 { width: @grid-column * 8; }
+.grid-9 { width: @grid-column * 9; }
+.grid-10 { width: @grid-column * 10; }
+.grid-11 { width: @grid-column * 11; }
+.grid-12 { width: @grid-column * 12; }
+
+//TODO: add hide/show classes for each breakpoint
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearing {
+  clear: both;
+}

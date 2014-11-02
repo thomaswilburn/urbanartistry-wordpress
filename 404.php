@@ -1,10 +1,10 @@
 <?php get_header() ?>
 
-<div class='column fluid grid-9 medium-100'>
+<div class="column fluid grid-9 medium-100">
 
-  <img class='small-hidden header-image' src='<?php header_image() ?>'>
+  <img class="small-hidden header-image" src="<?php header_image() ?>">
 
-  <div class='content clearfix'>
+  <div class="content clearfix">
 
     <h2>404 - Not Found</h2>
 
@@ -12,7 +12,5 @@
 
   </div>
 </div>
-
-  <?php /*get_sidebar()*/ ?>
 
 <?php get_footer() ?>

@@ -6,6 +6,9 @@ Version: 2.0
 Description: A new, lighter, responsive theme for UA on Wordpress.
 */
 
+@import "vars";
+@import "grid";
+
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -32,70 +35,12 @@ img, object, embed, iframe {
   border: none;
 }
 
-/* responsive units */
-html {
-  font-size: 14px;
-}
-
-@mobile: ~"(max-width: 480px)";
-@tablet: ~"(max-width: 720px)";
-
-/* 12-column grid */
-
-@grid-column: 100% / 12;
-
-.grid-1,
-.grid-2,
-.grid-3,
-.grid-4,
-.grid-5,
-.grid-6,
-.grid-7,
-.grid-8,
-.grid-9,
-.grid-10,
-.grid-11,
-.grid-12 { 
-  float: left
-
-  @media @mobile {
-    width: 100%;
-  }
-}
-
-.grid-1 { width: @grid-column * 1; }
-.grid-2 { width: @grid-column * 2; }
-.grid-3 { width: @grid-column * 3; }
-.grid-4 { width: @grid-column * 4; }
-.grid-5 { width: @grid-column * 5; }
-.grid-6 { width: @grid-column * 6; }
-.grid-7 { width: @grid-column * 7; }
-.grid-8 { width: @grid-column * 8; }
-.grid-9 { width: @grid-column * 9; }
-.grid-10 { width: @grid-column * 10; }
-.grid-11 { width: @grid-column * 11; }
-.grid-12 { width: @grid-column * 12; }
-
-//TODO: add hide/show classes for each breakpoint
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-.clearing {
-  clear: both;
-}
-
 /* element styling and typography */
 
 body {
   margin: 0 auto;
   max-width: 1000px;
-  font-family: 'Droid Sans', Tahoma, sans-serif;
+  font-family: @droid;
   background: #EEE;
   line-height: 1.5;
 }
@@ -108,12 +53,12 @@ body {
 }
 
 .urban {
-  font-family: 'Archivo Black';/*'Bowlby One';*/
+  font-family: @urban;
   text-transform: uppercase;
 }
 
 .artistry {
-  font-family: 'Pinyon Script';
+  font-family: @artistry;
   font-size: 1.5em;
 }
 
@@ -122,7 +67,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Archivo Black';
+  font-family: @urban;
   font-size: 1.5em;
   text-transform: uppercase;
 }
@@ -132,7 +77,7 @@ h3 {
 }
 
 .ua-red, a {
-  color: #F72405
+  color: @ua-red;
 }
 
 /* class to kill Wordpress "friendly" formatting */
@@ -279,7 +224,7 @@ h3 {
 
 .sidebar h2, h3, h4 {
   font-size: 1em;
-  font-family: 'Droid Sans', tahoma, helvetica;
+  font-family: @droid;
 }
 
 .sidebar input {

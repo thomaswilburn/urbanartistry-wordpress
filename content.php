@@ -1,4 +1,4 @@
-<div class='content clearfix <?php echo $post->post_name ?>'>
+<div class="content clearfix <?php echo $post->post_name ?>">
 
   <h2><?php the_title(); ?></h2>
 

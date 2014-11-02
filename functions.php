@@ -1,29 +1,29 @@
 <?php
 
-add_action('init', ua_init);
-add_action('wp_enqueue_scripts', 'replaceJQuery');
+add_action("init", ua_init);
+add_action("wp_enqueue_scripts", "replaceJQuery");
 
 function add_animated_class($classes, $item) {
-  $classes[] = 'animated';
+  $classes[] = "animated";
   return $classes;
 }
 
 function replaceJQuery() {
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js');
-	wp_enqueue_script('jquery');
+	wp_deregister_script("jquery");
+	wp_register_script("jquery", "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js");
+	wp_enqueue_script("jquery");
 }
 
 function ua_init() {
 
-  register_nav_menus(array('main-menu' => 'Main Menu'));
-  register_sidebar(array('name' => 'Social Media', 'id' => 'ua_social', 'after_widget' => '</li>'));
-  register_sidebar(array('name' => 'Home Page', 'id' => 'ua_home'));
-  add_filter('nav_menu_css_class', 'add_animated_class', 10, 2);
+  register_nav_menus(array("main-menu" => "Main Menu"));
+  register_sidebar(array("name" => "Social Media", "id" => "ua_social", "after_widget" => "</li>"));
+  register_sidebar(array("name" => "Home Page", "id" => "ua_home"));
+  add_filter("nav_menu_css_class", "add_animated_class", 10, 2);
 
-  add_theme_support('post-thumbnails');
+  add_theme_support("post-thumbnails");
   set_post_thumbnail_size(0, 0, true);
-  add_theme_support('custom-header', array());
+  add_theme_support("custom-header", array());
 
 
 }
