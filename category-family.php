@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<div class="column fluid grid-9 medium-100">
+<div class="column grid-9">
 
   <img class="small-hidden header-image" src="<?php header_image() ?>">
 
@@ -17,7 +17,7 @@
       //custom sort for family pages
       //sorts first by "rank", then by "sort name"
       usort($pageposts, create_function("$a, $b",
-        "$rankA = get_post_meta($a->ID, "rank", true) * 1;
+        '$rankA = get_post_meta($a->ID, "rank", true) * 1;
         $rankB = get_post_meta($b->ID, "rank", true) * 1;
         $rankA = $rankA == 0 ? 100000 : $rankA;
         $rankB = $rankB == 0 ? 100000 : $rankB;
@@ -25,7 +25,7 @@
         if ($rankA > $rankB) return 1;
         $nameA = get_post_meta($a->ID, "sort name", true);
         $nameB = get_post_meta($b->ID, "sort name", true);
-        return strcasecmp($nameA, $nameB);"));
+        return strcasecmp($nameA, $nameB);'));
 
       global $post;
       $currentRank = 1;
@@ -52,15 +52,13 @@
     var mug = $this.find(".mugshot");
     var w = mug.width();
     var h = mug.height();
-    var src = "<iframe width="{{w}}" height="{{h}}" src="https://www.youtube-nocookie.com/embed/{{url}}?rel=0&autoplay=1&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>";
+    var src = '<iframe width="{{w}}" height="{{h}}" src="https://www.youtube-nocookie.com/embed/{{url}}?rel=0&autoplay=1&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>';
     var url = $this.data("video");
     src = src.replace("{{w}}", w).replace("{{h}}", h).replace("{{url}}", url);
     $this.html(src);
-  })//.append("<a class="video-chiron">Watch bio video</a>");
+  })
 
   $(".video-chiron").hide();
 </script>
-
-  <?php /*get_sidebar()*/ ?>
 
 <?php get_footer() ?>

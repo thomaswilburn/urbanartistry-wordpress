@@ -1,10 +1,10 @@
 <?php
   if (get_the_content()) {
-    $postWidth = "fluid-100";
-    $photoWidth = "fluid-50";
+    $postWidth = "grid-12";
+    $photoWidth = "grid-6";
   } else {
-    $postWidth = "fluid-50";
-    $photoWidth = "fluid-100";
+    $postWidth = "grid-6";
+    $photoWidth = "grid-12";
   }
   $id = get_the_id();
 ?>
@@ -15,7 +15,7 @@
 
 <?php if (has_post_thumbnail()) : ?>
   <?php $video = get_post_meta($id, "bio video", true) ?>
-  <div class="mugshot-container fluid <?php if ($video) echo "has-video "; echo $photoWidth; ?>" data-video="<?php echo $video?>">
+  <div class="mugshot-container <?php if ($video) echo "has-video "; echo $photoWidth; ?>" data-video="<?php echo $video?>">
 
     <img class="mugshot" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $id ) ); ?>">
 
@@ -25,7 +25,7 @@
 
   </div>
 
-  <div class="fluid fluid-50">
+  <div class="grid-6">
     <?php the_content() ?>
     <?php if (get_post_meta($id, "link", true)) {  ?>
     <a href="<?php echo get_post_meta($id, "link", true) ?>" class="bio-link">Read more...</a>

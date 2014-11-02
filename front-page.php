@@ -1,13 +1,11 @@
 <?php get_header() ?>
 
-<div class="column fluid grid-9 medium-100">
+<div class="column grid-9">
 
  <img class="small-hidden header-image" src="<?php header_image() ?>">
 
   <?php
-
     the_post();
-
   ?>
 
   <div class="content clearfix">
@@ -15,9 +13,7 @@
     <h2><?php the_title(); ?></h2>
 
     <div class="">
-
       <?php the_content(); ?>
-
     </div>
 
     <div class="social-bar">

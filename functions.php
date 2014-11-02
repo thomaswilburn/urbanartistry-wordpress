@@ -10,7 +10,7 @@ function add_animated_class($classes, $item) {
 
 function replaceJQuery() {
 	wp_deregister_script("jquery");
-	wp_register_script("jquery", "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js");
+	wp_register_script("jquery", "http://code.jquery.com/jquery-2.1.1.min.js");
 	wp_enqueue_script("jquery");
 }
 
@@ -24,6 +24,5 @@ function ua_init() {
   add_theme_support("post-thumbnails");
   set_post_thumbnail_size(0, 0, true);
   add_theme_support("custom-header", array());
-
 
 }
