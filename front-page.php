@@ -8,11 +8,11 @@
 
     <h2><?php the_title(); ?></h2>
 
-    <div class="grid-9 mobile-12">
+    <div class="grid-8 mobile-12">
       <?php the_content(); ?>
     </div>
     
-    <div class="sidebar grid-3 mobile-hidden">
+    <div class="sidebar grid-3 space-1 mobile-hidden">
       <?php dynamic_sidebar("ua_home"); ?>
     </div>
 
