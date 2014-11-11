@@ -6,35 +6,17 @@ Version: 2.0
 Description: A new, lighter, responsive theme for UA on Wordpress.
 */
 
-@import "vars";
-@import "grid";
-@import "menu";
-
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-/* reset */
-html, body, div, h1, h2, h3, h4, h5, p {
-  padding: 0;
-  margin: 0;
-}
 
-p {
-  margin-bottom: 1em;
-}
-
-h2 {
-  margin-bottom: .5em;
-}
-
-img, object, embed, iframe {
-  max-width: 100% !important;
-  outline: none;
-  border: none;
-}
+@import "vars";
+@import "grid";
+@import "menu";
+@import "front";
 
 /* element styling and typography */
 
@@ -110,115 +92,6 @@ h3 {
   display: block;
   margin-bottom: 1em;
   box-shadow: 4px 2px 8px #AAAAAA;
-}
-
-.sidebar {
-  padding: 1em;
-  border: 3px dashed #EEE;
-  background: #F8F8F8;
-  top: 0;
-  font-size: .75em;
-  text-align: center;
-
-  li {
-    list-style-type: none;
-    margin-bottom: 2em;
-    display: block;
-    width: 100%;
-  }
-
-  h2, h3, h4 {
-    font-size: 1em;
-    font-family: @droid;
-  }
-
-  input {
-    width: 100%;
-  }
-
-  img {
-    margin: 0 auto 1em;
-    width: 100px;
-    display: block;
-
-    @media @mobile {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 1em;
-    }
-  }
-
-  .widgetry {
-    text-align: center;
-  }
-
-  .widgetry li {
-    list-style-type: none;
-  }
-
-  .widgetry h2 {
-    font-weight: normal;
-    font-size: 1.2em;
-    margin-bottom: 0;
-  }
-}
-
-
-/* mailchimp area */
-
-.mc_signup {
-  font-size: .8em;
-}
-
-.mc_merge_var {
-  display: inline;
-}
-
-#mc_signup_form label.mc_var_label {
-  display: inline;
-}
-
-#mc_signup_form .mc_input {
-  width: 200px;
-  max-width: 100%;
-  display: inline-block;
-  border: 1px solid #888;
-}
-
-.mc_signup_submit {
-  display: inline;
-}
-
-input#mc_signup_submit {
-  display: inline;
-  margin-top: 0px;
-  width: 100px;
-  border: 1px solid #888;
-}
-
-/* home page */
-
-img.size-icon {
-  width: 50px;
-  max-height: 50px;
-}
-
-.social-bar {
-  width: 100%;
-  background: #EEE;
-  color: #888;
-  padding: 4px;
-  border-width: 1px 0;
-  border-color: #DDD;
-  border-style: solid;
-  text-align: center;
-  margin: 8px 0;
-
-  .social-sidebar {
-    li.widget {
-      list-style-type: none;
-    }
-  }
 }
 
 .organizations {

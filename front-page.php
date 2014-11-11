@@ -8,7 +8,7 @@
 
     <!--<h2><?php the_title(); ?></h2>-->
     <?php $mainWidth = is_active_sidebar("ua_home") ? "grid-8" : "grid-12" ?>
-    <div class="<?php echo $mainWidth ?> mobile-12">
+    <div class="page-content <?php echo $mainWidth ?> mobile-12">
       <?php the_content(); ?>
     </div>
 
