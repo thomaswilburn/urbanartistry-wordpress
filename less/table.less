@@ -1,0 +1,54 @@
+@import "vars";
+
+.responsive-table {
+  line-height: 1;
+  font-size: 14px;
+  border-collapse: collapse;
+
+  //stupid automatic wordpress paragraph tags
+  p {
+    display: none;
+  }
+
+  .grouped {
+    border-top: 1px solid black;
+    padding-top: 8px;
+  }
+
+  tr {
+    &:nth-child(2n) {
+      td {
+        background: #EEE;
+      }
+    }
+  }
+
+  th {
+    background: #555;
+    color: white;
+  }
+
+  th, td {
+    padding: 4px 8px;
+  }
+
+  //everything's about converting to a list on small devices
+  @media @tablet {
+    display: block;
+
+    tr {
+      display: block;
+    }
+
+    td {
+      display: block;
+    }
+
+    th {
+      display: block;
+      background: white;
+    }
+
+  }
+
+}
