@@ -21,8 +21,8 @@ function replaceJQuery() {
 function ua_init() {
 
   register_nav_menus(array("main-menu" => "Main Menu"));
-  register_sidebar(array("name" => "Social Media", "id" => "ua_social", "after_widget" => "</li>"));
   register_sidebar(array("name" => "Home Page", "id" => "ua_home"));
+  register_sidebar(array("name" => "Home Page - Bottom", "id" => "ua_home_bottom"));
   add_filter("nav_menu_css_class", "add_animated_class", 10, 2);
 
   add_theme_support("post-thumbnails");

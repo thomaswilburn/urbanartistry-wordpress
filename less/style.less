@@ -120,55 +120,51 @@ h3 {
   font-size: .75em;
   text-align: center;
 
-}
-
-.sidebar li {
-  list-style-type: none;
-  margin-bottom: 2em;
-  display: block;
-  width: 100%;
-}
-
-.sidebar h2, h3, h4 {
-  font-size: 1em;
-  font-family: @droid;
-}
-
-.sidebar input {
-  width: 100%;
-}
-
-.sidebar img {
-  margin: 0 auto 1em;
-  width: 100px;
-  display: block;
-}
-
-@media (max-width: 500px) {
-
-  .sidebar img {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 1em;
+  li {
+    list-style-type: none;
+    margin-bottom: 2em;
+    display: block;
+    width: 100%;
   }
 
+  h2, h3, h4 {
+    font-size: 1em;
+    font-family: @droid;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  img {
+    margin: 0 auto 1em;
+    width: 100px;
+    display: block;
+
+    @media @mobile {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1em;
+    }
+  }
+
+  .widgetry {
+    text-align: center;
+  }
+
+  .widgetry li {
+    list-style-type: none;
+  }
+
+  .widgetry h2 {
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
 }
+
 
 /* mailchimp area */
-
-.widgetry {
-  text-align: center;
-}
-
-.widgetry li {
-  list-style-type: none;
-}
-
-.widgetry h2 {
-  font-weight: normal;
-  font-size: 1.2em;
-  margin-bottom: 0;
-}
 
 .mc_signup {
   font-size: .8em;
@@ -185,7 +181,7 @@ h3 {
 #mc_signup_form .mc_input {
   width: 200px;
   max-width: 100%;
-  display: inline;
+  display: inline-block;
   border: 1px solid #888;
 }
 
@@ -217,6 +213,12 @@ img.size-icon {
   border-style: solid;
   text-align: center;
   margin: 8px 0;
+
+  .social-sidebar {
+    li.widget {
+      list-style-type: none;
+    }
+  }
 }
 
 .organizations {
