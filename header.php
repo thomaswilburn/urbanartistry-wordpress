@@ -19,8 +19,8 @@
     <?php wp_nav_menu( array(
       "theme_location" => "main-menu",
       "container" => "div",
-      //"container_class" => "small-hidden",
-      //"container_id" => "menu-desktop",
+      "container_class" => "main-menu",
+      //"container_id" => "menu-primary-navigation-container",
       "menu_class" => "urban menu-inner clearfix",
     ) ); ?>
   </div>

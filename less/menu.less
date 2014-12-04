@@ -47,6 +47,7 @@
   //handle flyout menus for third level
   .sub-menu {
     position: relative;
+    z-index: 999;
     
     .sub-menu {
       display: none;
@@ -57,7 +58,7 @@
       width: 200px;
     }
 
-    &:hover > li > .sub-menu {
+    li:hover > .sub-menu {
       display: block;
       @media @tablet {
         display: none;
@@ -70,7 +71,7 @@
       color: @ua-red;
     }
 
-    .menu-primary-navigation-container {
+    .main-menu {
       display: none;
       position: absolute;
       width: 100%;
